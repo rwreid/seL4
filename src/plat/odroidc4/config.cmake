@@ -1,5 +1,5 @@
 #
-# Copyright 2020, Data61, CSIRO (ABN 41 687 119 230)
+# Copyright 2021, Data61, CSIRO (ABN 41 687 119 230)
 #
 # SPDX-License-Identifier: GPL-2.0-only
 #
@@ -10,13 +10,11 @@ declare_platform(odroidc4 KernelPlatformOdroidc4 PLAT_ODROIDC4 KernelSel4ArchAar
 
 if(KernelPlatformOdroidc4)
     declare_seL4_arch(aarch64)
-    # No specific config for KernelArmCortexA55 created yet
-    set(KernelArmCortexA53 ON)
+    set(KernelArmCortexA55 ON)
     set(KernelArchArmV8a ON)
     config_set(KernelARMPlatform ARM_PLAT odroidc4)
     set(KernelArmMachFeatureModifiers "+crc" CACHE INTERNAL "")
-    list(APPEND KernelDTSList "tools/dts/odroidc4.dts")
-    list(APPEND KernelDTSList "src/plat/odroidc4/overlay-odroidc4.dts")
+    list(APPEND KernelDTSList "tools/dts/odroidc4.dts" "src/plat/odroidc4/overlay-odroidc4.dts")
     declare_default_headers(
         TIMER_FREQUENCY 24000000llu
         MAX_IRQ 255

@@ -1,5 +1,5 @@
 /*
- * Copyright 2020, Data61, CSIRO (ABN 41 687 119 230)
+ * Copyright 2021, Data61, CSIRO (ABN 41 687 119 230)
  *
  * SPDX-License-Identifier: BSD-2-Clause
  */
@@ -8,7 +8,7 @@
 
 #include <autoconf.h>
 
-/* Cortex A53 manual, section 11.6.1 */
+/* Cortex A55 manual */
 #define seL4_NumHWBreakpoints (10)
 #define seL4_NumExclusiveBreakpoints (6)
 #define seL4_NumExclusiveWatchpoints (4)
